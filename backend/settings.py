@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "sslserver",
+    "social_django",
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+
+# OAuth2 Shikimori
+
+SOCIAL_AUTH_SHIKIMORI_OAUTH2_KEY = os.getenv("SHIKI_CLIENT_ID")
+SOCIAL_AUTH_SHIKIMORI_OAUTH2_SECRET = os.getenv("SHIKI_CLIENT_SECRET")
+
+LOGIN_URL = "/auth/login/"
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
