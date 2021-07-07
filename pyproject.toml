@@ -21,6 +21,16 @@ flakehell = "^0.9.0"
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.commitizen]
+version = "0.1.0"
+tag_format = "v$version"
+version_files = [
+    "pyproject.toml:version"
+]
+update_changelog_on_bump = true
+changelog_incremental = true
+bump_message = "build(project): update version $current_version to $new_version"
+
 [tool.flakehell]
 extended_default_ignore=[]
 exclude = [".git", "__pycache__", "tests", "polygon.py", "generate_test_data.py"]
