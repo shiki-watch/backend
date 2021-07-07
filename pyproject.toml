@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "shiki-watch"
 version = "0.1.0"
-description = "anime aggregator with shikimori synchronization"
+description = "anime aggregator with shikimori synchronization. backend part"
 authors = ["Daniil <dadyarri@gmail.com>"]
 license = "MIT"
 
